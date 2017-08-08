@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  get '/bas' , to: 'application#update'
+  resources :filedetails
+  resources :dirdetails
+  get '/init' , to: 'application#update'
+  get '/dirdetails/find/:name', to: 'dirdetails#index'
 end
