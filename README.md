@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This api allows you to access the base directory ./public/homedir .
 
-Things you may want to cover:
+Database was created using task file : sucide (lib/tasks/sucide.rake)
 
-* Ruby version
+Through following commands :
 
-* System dependencies
+* rake sucide:dbinit
 
-* Configuration
+* rake sucide:dbupdate
 
-* Database creation
+Database consist of a single table named : pathprints
 
-* Database initialization
+With 1-many self join relation on itself.
 
-* How to run the test suite
+Finally the json data was serialized using active modal serializer and rendered to the user.
 
-* Services (job queues, cache servers, search engines, etc.)
+To query Base Directory, try the following urls:
 
-* Deployment instructions
+* http://localhost:3000/
 
-* ...
+* http://localhost:3000/?path=PATH
+
+e.g: http://localhost:3000/?path=tempdir1
