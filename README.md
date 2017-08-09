@@ -1,24 +1,26 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to the RESTful APIs for checking the directories and files in the given server!
 
-Things you may want to cover:
+The architechture has been implementing using Models Dirdetail and Filedetail along with their corresponding Serializers to display the useful JSON Data.
 
-* Ruby version
+The following are the steps to use this API Toolbox:
 
-* System dependencies
+1. bundle install
+2. rails db:migrate
+3. rail s 
 
-* Configuration
+Check localhost:3000 to verify if the server is working or not!
 
-* Database creation
+Now to push all the directory and file data into the database run the following HTTP request:
 
-* Database initialization
+GET /init or simple do- http:/localhost:3000/init
 
-* How to run the test suite
+This will update the entire database and you are ready to use it!
 
-* Services (job queues, cache servers, search engines, etc.)
+The following are the APIs and their corresponding responses:
 
-* Deployment instructions
-
-* ...
+1. http:/localhost:3000/dirdetails/ -> Display all Directories
+2. http:/localhost:3000/filedetails/ -> Display all Files
+3. http:/localhost:3000/dirdetails/?path=PATH -> Display all contents of the given path of a directory
+4. http:/localhost:3000/filedetails/?path=PATH -> Display all contents of the given path of a file
