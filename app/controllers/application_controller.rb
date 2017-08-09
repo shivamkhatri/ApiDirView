@@ -6,8 +6,7 @@ class ApplicationController < ActionController::API
 			ptype = "directory"
 			path = "#{item}/"
 			tpath = "#{item}"
-			temp = tpath.split("/")
-			temp = temp[-1]
+			temp = tpath.split("/")[-1]
 			Dirdetail.create(name: temp, path: path, owner: owner, ptype: ptype)
 				Dir.foreach(item) do |itr|
 					if itr.include? "." or itr.include? ".." or item.include? "." or item.include? ".."

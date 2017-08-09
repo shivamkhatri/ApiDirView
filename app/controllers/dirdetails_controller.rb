@@ -3,10 +3,9 @@ class DirdetailsController < ApplicationController
 
   # GET /dirdetails
   def index
-    @test = Dirdetail.find(params)
-    @dirdetails = Dirdetail.all
-
-    render json: @test
+    @dirdetails = Dirdetail.find_by path: "#{params[:path]}"
+    puts "#{params[:name]}"
+    render json: @dirdetails
   end
 
   # GET /dirdetails/1
