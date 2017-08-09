@@ -6,7 +6,7 @@ class CreateDirdetails < ActiveRecord::Migration[5.1]
       t.string :owner
       t.string :ptype
       t.string :parent
-
+    
       t.timestamps
     end
   end

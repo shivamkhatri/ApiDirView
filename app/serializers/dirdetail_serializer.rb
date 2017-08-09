@@ -1,3 +1,3 @@
 class DirdetailSerializer < ActiveModel::Serializer
-  attributes :name, :path, :parent
+  attributes :id, :name, :path, :parent
 end

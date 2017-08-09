@@ -3,8 +3,12 @@ class DirdetailsController < ApplicationController
 
   # GET /dirdetails
   def index
-    @mother = Dirdetail.find_by path: "#{params[:path]}"
-    render json: @mother.filedetails
+    @mother = Dirdetail.find_by path: params[:path]
+     if(@mother != nil)
+      render json: @mother.filedetails
+    else
+        render json: "No Files in this Directory."
+    end
   end
 
   # GET /dirdetails/1
