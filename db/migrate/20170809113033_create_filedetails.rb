@@ -5,6 +5,8 @@ class CreateFiledetails < ActiveRecord::Migration[5.1]
       t.string :path
       t.string :owner
       t.string :ptype
+      t.string :parent
+      t.references :dirdetail, foreign_key: true
 
       t.timestamps
     end

@@ -1,37 +1,38 @@
 class ApplicationController < ActionController::API
 
-	def postOrder(item)
+	def postOrder(item, id)
+		if item == "." or item == ".."
+			return
+		end
+		owner = "#{%x{stat -c '%U' #{item}}}"
+		path = "#{item}/"
+		tpath = "#{item}"
+		parent = tpath.split("/")[-2]
+		temp = tpath.split("/")[-1]
 		if File.directory?(item)
-			owner = "#{%x{stat -c '%U' #{item}}}"
 			ptype = "directory"
-			path = "#{item}/"
-			tpath = "#{item}"
-			temp = tpath.split("/")[-1]
-			Dirdetail.create(name: temp, path: path, owner: owner, ptype: ptype)
-				Dir.foreach(item) do |itr|
-					if itr.include? "." or itr.include? ".." or item.include? "." or item.include? ".."
-						@ans1 = @ans1 
-					else
-						x = "#{item}/#{itr}"
-						postOrder(x)
-					end
+			Dirdetail.create(name: temp, path: path, owner: owner, ptype: ptype, parent: parent)
+			Dir.foreach(item) do |itr|
+				if itr == "." or itr == ".."
+					@test = 0
+				else
+					x = "#{item}/#{itr}"
+					postOrder(x, id + 1)
 				end
+			end
 		else
-			owner = "#{%x{stat -c '%U' #{item}}}"
-			ptype = "file"
-			path = "#{item}/"
-			tpath = "#{item}"
-			temp = tpath.split("/")
-			temp = temp[-1]
-			Filedetail.create(name: temp, path: path, owner: owner, ptype: ptype)
-		
+			%x{echo file: "#{item} #{parent} #{id}" >> output}
+			@x = Filedetail.new(name: temp, path: path, owner: owner, ptype: ptype, parent: parent,  dirdetail_id: id)
+			@x.save
+			%x{echo file: "#{@x.errors.full_messages}" >> output}
 		end
 	end
+
 	def update
 		Dir.foreach(Dir.pwd) do |item|
-			postOrder(item)		
+			postOrder(item, 2)		
 		end
-		redirect_to dirdetails_path
+		redirect_to "localhost:3000/dirdetails/?path=app/"
 	end	
 
 end

@@ -5,9 +5,13 @@ one:
   path: MyString
   owner: MyString
   ptype: MyString
+  parent: MyString
+  dirdetail: one
 
 two:
   name: MyString
   path: MyString
   owner: MyString
   ptype: MyString
+  parent: MyString
+  dirdetail: two

@@ -10,13 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170808222147) do
+ActiveRecord::Schema.define(version: 20170809113033) do
 
   create_table "dirdetails", force: :cascade do |t|
     t.string "name"
     t.string "path"
     t.string "owner"
     t.string "ptype"
+    t.string "parent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -26,8 +27,11 @@ ActiveRecord::Schema.define(version: 20170808222147) do
     t.string "path"
     t.string "owner"
     t.string "ptype"
+    t.string "parent"
+    t.integer "dirdetail_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["dirdetail_id"], name: "index_filedetails_on_dirdetail_id"
   end
 
 end

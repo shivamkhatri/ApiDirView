@@ -1,17 +1,436 @@
-total 60
-drwxr-xr-x 2 shan2new shan2new 4096 Aug  9 01:13 vendor
-drwxr-xr-x 5 shan2new shan2new 4096 Aug  9 01:18 tmp
-drwxr-xr-x 7 shan2new shan2new 4096 Aug  9 01:13 test
--rw-r--r-- 1 shan2new shan2new  374 Aug  9 01:13 README.md
--rw-r--r-- 1 shan2new shan2new  227 Aug  9 01:13 Rakefile
-drwxr-xr-x 2 shan2new shan2new 4096 Aug  9 01:13 public
--rw-r--r-- 1 shan2new shan2new    0 Aug  9 01:28 output
-drwxr-xr-x 2 shan2new shan2new 4096 Aug  9 01:18 log
-drwxr-xr-x 3 shan2new shan2new 4096 Aug  9 01:13 lib
--rw-r--r-- 1 shan2new shan2new 3232 Aug  9 01:13 Gemfile.lock
--rw-r--r-- 1 shan2new shan2new 1392 Aug  9 01:13 Gemfile
-drwxr-xr-x 2 shan2new shan2new 4096 Aug  9 01:13 db
--rw-r--r-- 1 shan2new shan2new  130 Aug  9 01:13 config.ru
-drwxr-xr-x 5 shan2new shan2new 4096 Aug  9 01:13 config
-drwxr-xr-x 2 shan2new shan2new 4096 Aug  9 01:13 bin
-drwxr-xr-x 8 shan2new shan2new 4096 Aug  9 01:13 app
+file: lib/common_stuff.rb lib 2
+file: []
+file: lib/tasks/.keep tasks 3
+file: []
+file: output  1
+file: []
+file: log/development.log log 2
+file: []
+file: log/.keep log 2
+file: []
+file: db/migrate/20170809113000_create_dirdetails.rb migrate 3
+file: []
+file: db/migrate/20170809113033_create_filedetails.rb migrate 3
+file: []
+file: db/schema.rb db 2
+file: []
+file: db/seeds.rb db 2
+file: []
+file: db/development.sqlite3 db 2
+file: []
+file: .git/logs/HEAD logs 3
+file: []
+file: .git/logs/refs/heads/master heads 5
+file: []
+file: .git/logs/refs/remotes/origin/HEAD origin 6
+file: []
+file: .git/logs/refs/remotes/origin/master origin 6
+file: []
+file: .git/HEAD .git 2
+file: []
+file: .git/info/exclude info 3
+file: []
+file: .git/hooks/applypatch-msg.sample hooks 3
+file: []
+file: .git/hooks/post-update.sample hooks 3
+file: []
+file: .git/hooks/pre-applypatch.sample hooks 3
+file: []
+file: .git/hooks/update.sample hooks 3
+file: []
+file: .git/hooks/prepare-commit-msg.sample hooks 3
+file: []
+file: .git/hooks/commit-msg.sample hooks 3
+file: []
+file: .git/hooks/pre-commit.sample hooks 3
+file: []
+file: .git/hooks/pre-push.sample hooks 3
+file: []
+file: .git/hooks/pre-rebase.sample hooks 3
+file: []
+file: .git/description .git 2
+file: []
+file: .git/packed-refs .git 2
+file: []
+file: .git/COMMIT_EDITMSG .git 2
+file: []
+file: .git/index .git 2
+file: []
+file: .git/objects/4e/797a387ea5689df9713aca20e2e7b571bb3a33 4e 4
+file: []
+file: .git/objects/f2/28c0b166e182364820172b810fd2613b6a8fd2 f2 4
+file: []
+file: .git/objects/1a/f0e4909fde2399dc9f6fb21c6c541ce03db273 1a 4
+file: []
+file: .git/objects/50/0abac7689242ea8eabfa07c216e60eb2ee686f 50 4
+file: []
+file: .git/objects/3e/5ff924006cb39bce661dc4e0172d66d5c85e93 3e 4
+file: []
+file: .git/objects/pack/pack-76edec95407a492390e50f19e9029cf151adf2ef.idx pack 4
+file: []
+file: .git/objects/pack/pack-76edec95407a492390e50f19e9029cf151adf2ef.pack pack 4
+file: []
+file: .git/objects/63/2cb0b7a44e9c98b98ec5c85d4e9339d3a8b078 63 4
+file: []
+file: .git/objects/fb/25a1a43b078d6f0b6179e4e2277f3a88d25cca fb 4
+file: []
+file: .git/objects/bc/fdfa7c8804de4e78171eb8ae1ff6caebcad9b9 bc 4
+file: []
+file: .git/refs/heads/master heads 4
+file: []
+file: .git/refs/remotes/origin/HEAD origin 5
+file: []
+file: .git/refs/remotes/origin/master origin 5
+file: []
+file: .git/config .git 2
+file: []
+file: README.md  1
+file: []
+file: public/robots.txt public 2
+file: []
+file: Gemfile  1
+file: []
+file: test/controllers/dirdetails_controller_test.rb controllers 3
+file: []
+file: test/controllers/.keep controllers 3
+file: []
+file: test/controllers/filedetails_controller_test.rb controllers 3
+file: []
+file: test/fixtures/dirdetails.yml fixtures 3
+file: []
+file: test/fixtures/filedetails.yml fixtures 3
+file: []
+file: test/fixtures/.keep fixtures 3
+file: []
+file: test/fixtures/files/.keep files 4
+file: []
+file: test/integration/.keep integration 3
+file: []
+file: test/models/filedetail_test.rb models 3
+file: []
+file: test/models/dirdetail_test.rb models 3
+file: []
+file: test/models/.keep models 3
+file: []
+file: test/mailers/.keep mailers 3
+file: []
+file: test/test_helper.rb test 2
+file: []
+file: app/controllers/concerns/.keep concerns 4
+file: []
+file: app/controllers/application_controller.rb controllers 3
+file: []
+file: app/controllers/dirdetails_controller.rb controllers 3
+file: []
+file: app/controllers/filedetails_controller.rb controllers 3
+file: []
+file: app/models/concerns/.keep concerns 4
+file: []
+file: app/models/filedetail.rb models 3
+file: []
+file: app/models/dirdetail.rb models 3
+file: []
+file: app/models/application_record.rb models 3
+file: []
+file: app/mailers/application_mailer.rb mailers 3
+file: []
+file: app/serializers/filedetail_serializer.rb serializers 3
+file: []
+file: app/serializers/dirdetail_serializer.rb serializers 3
+file: []
+file: app/channels/application_cable/connection.rb application_cable 4
+file: []
+file: app/channels/application_cable/channel.rb application_cable 4
+file: []
+file: app/views/layouts/mailer.text.erb layouts 4
+file: []
+file: app/views/layouts/mailer.html.erb layouts 4
+file: []
+file: app/jobs/application_job.rb jobs 3
+file: []
+file: Rakefile  1
+file: []
+file: vendor/.keep vendor 2
+file: []
+file: Gemfile.lock  1
+file: []
+file: .gitignore  1
+file: []
+file: config.ru  1
+file: []
+file: bin/setup bin 2
+file: []
+file: bin/spring bin 2
+file: []
+file: bin/rails bin 2
+file: []
+file: bin/update bin 2
+file: []
+file: bin/rake bin 2
+file: []
+file: bin/bundle bin 2
+file: []
+file: config/application.rb config 2
+file: []
+file: config/locales/en.yml locales 3
+file: []
+file: config/secrets.yml config 2
+file: []
+file: config/database.yml config 2
+file: []
+file: config/boot.rb config 2
+file: []
+file: config/cable.yml config 2
+file: []
+file: config/environment.rb config 2
+file: []
+file: config/puma.rb config 2
+file: []
+file: config/routes.rb config 2
+file: []
+file: config/environments/test.rb environments 3
+file: []
+file: config/environments/development.rb environments 3
+file: []
+file: config/environments/production.rb environments 3
+file: []
+file: config/initializers/wrap_parameters.rb initializers 3
+file: []
+file: config/initializers/application_controller_renderer.rb initializers 3
+file: []
+file: config/initializers/inflections.rb initializers 3
+file: []
+file: config/initializers/backtrace_silencers.rb initializers 3
+file: []
+file: config/initializers/filter_parameter_logging.rb initializers 3
+file: []
+file: config/initializers/cors.rb initializers 3
+file: []
+file: config/initializers/mime_types.rb initializers 3
+file: []
+file: config/spring.rb config 2
+file: []
+file: tmp/.keep tmp 2
+file: []
+file: tmp/pids/server.pid pids 3
+file: []
+file: tmp/restart.txt tmp 2
+file: []
+file: lib/common_stuff.rb lib 3
+file: []
+file: lib/tasks/.keep tasks 4
+file: []
+file: output  2
+file: []
+file: log/development.log log 3
+file: []
+file: log/.keep log 3
+file: []
+file: db/migrate/20170809113000_create_dirdetails.rb migrate 4
+file: []
+file: db/migrate/20170809113033_create_filedetails.rb migrate 4
+file: []
+file: db/schema.rb db 3
+file: []
+file: db/seeds.rb db 3
+file: []
+file: db/development.sqlite3 db 3
+file: []
+file: .git/logs/HEAD logs 4
+file: []
+file: .git/logs/refs/heads/master heads 6
+file: []
+file: .git/logs/refs/remotes/origin/HEAD origin 7
+file: []
+file: .git/logs/refs/remotes/origin/master origin 7
+file: []
+file: .git/HEAD .git 3
+file: []
+file: .git/info/exclude info 4
+file: []
+file: .git/hooks/applypatch-msg.sample hooks 4
+file: []
+file: .git/hooks/post-update.sample hooks 4
+file: []
+file: .git/hooks/pre-applypatch.sample hooks 4
+file: []
+file: .git/hooks/update.sample hooks 4
+file: []
+file: .git/hooks/prepare-commit-msg.sample hooks 4
+file: []
+file: .git/hooks/commit-msg.sample hooks 4
+file: []
+file: .git/hooks/pre-commit.sample hooks 4
+file: []
+file: .git/hooks/pre-push.sample hooks 4
+file: []
+file: .git/hooks/pre-rebase.sample hooks 4
+file: []
+file: .git/description .git 3
+file: []
+file: .git/packed-refs .git 3
+file: []
+file: .git/COMMIT_EDITMSG .git 3
+file: []
+file: .git/index .git 3
+file: []
+file: .git/objects/4e/797a387ea5689df9713aca20e2e7b571bb3a33 4e 5
+file: []
+file: .git/objects/f2/28c0b166e182364820172b810fd2613b6a8fd2 f2 5
+file: []
+file: .git/objects/1a/f0e4909fde2399dc9f6fb21c6c541ce03db273 1a 5
+file: []
+file: .git/objects/50/0abac7689242ea8eabfa07c216e60eb2ee686f 50 5
+file: []
+file: .git/objects/3e/5ff924006cb39bce661dc4e0172d66d5c85e93 3e 5
+file: []
+file: .git/objects/pack/pack-76edec95407a492390e50f19e9029cf151adf2ef.idx pack 5
+file: []
+file: .git/objects/pack/pack-76edec95407a492390e50f19e9029cf151adf2ef.pack pack 5
+file: []
+file: .git/objects/63/2cb0b7a44e9c98b98ec5c85d4e9339d3a8b078 63 5
+file: []
+file: .git/objects/fb/25a1a43b078d6f0b6179e4e2277f3a88d25cca fb 5
+file: []
+file: .git/objects/bc/fdfa7c8804de4e78171eb8ae1ff6caebcad9b9 bc 5
+file: []
+file: .git/refs/heads/master heads 5
+file: []
+file: .git/refs/remotes/origin/HEAD origin 6
+file: []
+file: .git/refs/remotes/origin/master origin 6
+file: []
+file: .git/config .git 3
+file: []
+file: README.md  2
+file: []
+file: public/robots.txt public 3
+file: []
+file: Gemfile  2
+file: []
+file: test/controllers/dirdetails_controller_test.rb controllers 4
+file: []
+file: test/controllers/.keep controllers 4
+file: []
+file: test/controllers/filedetails_controller_test.rb controllers 4
+file: []
+file: test/fixtures/dirdetails.yml fixtures 4
+file: []
+file: test/fixtures/filedetails.yml fixtures 4
+file: []
+file: test/fixtures/.keep fixtures 4
+file: []
+file: test/fixtures/files/.keep files 5
+file: []
+file: test/integration/.keep integration 4
+file: []
+file: test/models/filedetail_test.rb models 4
+file: []
+file: test/models/dirdetail_test.rb models 4
+file: []
+file: test/models/.keep models 4
+file: []
+file: test/mailers/.keep mailers 4
+file: []
+file: test/test_helper.rb test 3
+file: []
+file: app/controllers/concerns/.keep concerns 5
+file: []
+file: app/controllers/application_controller.rb controllers 4
+file: []
+file: app/controllers/dirdetails_controller.rb controllers 4
+file: []
+file: app/controllers/filedetails_controller.rb controllers 4
+file: []
+file: app/models/concerns/.keep concerns 5
+file: []
+file: app/models/filedetail.rb models 4
+file: []
+file: app/models/dirdetail.rb models 4
+file: []
+file: app/models/application_record.rb models 4
+file: []
+file: app/mailers/application_mailer.rb mailers 4
+file: []
+file: app/serializers/filedetail_serializer.rb serializers 4
+file: []
+file: app/serializers/dirdetail_serializer.rb serializers 4
+file: []
+file: app/channels/application_cable/connection.rb application_cable 5
+file: []
+file: app/channels/application_cable/channel.rb application_cable 5
+file: []
+file: app/views/layouts/mailer.text.erb layouts 5
+file: []
+file: app/views/layouts/mailer.html.erb layouts 5
+file: []
+file: app/jobs/application_job.rb jobs 4
+file: []
+file: Rakefile  2
+file: []
+file: vendor/.keep vendor 3
+file: []
+file: Gemfile.lock  2
+file: []
+file: .gitignore  2
+file: []
+file: config.ru  2
+file: []
+file: bin/setup bin 3
+file: []
+file: bin/spring bin 3
+file: []
+file: bin/rails bin 3
+file: []
+file: bin/update bin 3
+file: []
+file: bin/rake bin 3
+file: []
+file: bin/bundle bin 3
+file: []
+file: config/application.rb config 3
+file: []
+file: config/locales/en.yml locales 4
+file: []
+file: config/secrets.yml config 3
+file: []
+file: config/database.yml config 3
+file: []
+file: config/boot.rb config 3
+file: []
+file: config/cable.yml config 3
+file: []
+file: config/environment.rb config 3
+file: []
+file: config/puma.rb config 3
+file: []
+file: config/routes.rb config 3
+file: []
+file: config/environments/test.rb environments 4
+file: []
+file: config/environments/development.rb environments 4
+file: []
+file: config/environments/production.rb environments 4
+file: []
+file: config/initializers/wrap_parameters.rb initializers 4
+file: []
+file: config/initializers/application_controller_renderer.rb initializers 4
+file: []
+file: config/initializers/inflections.rb initializers 4
+file: []
+file: config/initializers/backtrace_silencers.rb initializers 4
+file: []
+file: config/initializers/filter_parameter_logging.rb initializers 4
+file: []
+file: config/initializers/cors.rb initializers 4
+file: []
+file: config/initializers/mime_types.rb initializers 4
+file: []
+file: config/spring.rb config 3
+file: []
+file: tmp/.keep tmp 3
+file: []
+file: tmp/pids/server.pid pids 4
+file: []
+file: tmp/restart.txt tmp 3
+file: []
